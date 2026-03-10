@@ -1,0 +1,256 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+
+\title[Study Material Sharing App]{Study Material Sharing Web Application}
+\subtitle{A Platform for Students to Upload and Access Study Resources}
+
+\author{
+\textbf{Group Members}
+\begin{itemize}
+\item Lakshya Srivastava (2400520100047)
+\item Ishant Kumar (2400520100041)
+\item Lokendra Singh (2400520100048)
+\item Mayank Bhardwaj (2400520100050)
+\item Virendra Kumar (2400520100075)
+\end{itemize}
+}
+\date{\today}
+
+
+
+
+\begin{document}
+
+%------------------------------------------------
+\begin{frame}
+\titlepage
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}{Problem Statement}
+\begin{block}{Current Issues}
+\begin{itemize}
+\item Study materials are scattered across different platforms.
+\item Students struggle to find reliable notes and PDFs.
+\item No centralized system for sharing academic resources.
+\end{itemize}
+\end{block}
+
+\begin{alertblock}{Goal}
+Create a centralized web platform where students can upload, search, and download study materials easily.
+\end{alertblock}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Proposed Solution}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+
+\textbf{Core Idea}
+
+\begin{itemize}
+\item Upload study materials
+\item Download PDFs
+\item Organized by subject and semester
+\item Secure authentication
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\begin{block}{Benefits}
+\begin{itemize}
+\item Easy access to resources
+\item Collaboration among students
+\item Organized academic content
+\end{itemize}
+\end{block}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Authentication and Authorization}
+
+\begin{block}{Authentication Methods}
+\begin{itemize}
+\item Users can sign up using email and password.
+\item Passwords are securely hashed before storing in the database.
+\item Users can also log in using OAuth providers (e.g., Google login).
+\end{itemize}
+\end{block}
+
+\begin{block}{JWT Based Authorization}
+\begin{itemize}
+\item After successful login, the server generates a JSON Web Token (JWT).
+\item The token is sent to the client and stored securely.
+\item Every protected API request includes the JWT for verification.
+\end{itemize}
+\end{block}
+
+\begin{exampleblock}{Benefits}
+\begin{itemize}
+\item Secure authentication
+\item Stateless session management
+\item Easy integration with third-party login systems
+\end{itemize}
+\end{exampleblock}
+
+\end{frame}
+
+
+
+%------------------------------------------------
+
+\begin{frame}{Upload Study Material}
+
+Users can upload study materials with detailed metadata.
+
+\begin{itemize}
+\item Upload PDF files
+\item Add title and description
+\item Select subject
+\item Select semester
+\item Add tags for search
+\end{itemize}
+
+\begin{block}{Example}
+Title: Operating System Notes \
+Subject: Operating Systems \
+Semester: 4
+\end{block}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Search and Filter System}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+
+\textbf{Search Options}
+
+\begin{itemize}
+\item Search by title
+\item Search by subject
+\item Tag based search
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\textbf{Filters}
+
+\begin{itemize}
+\item Semester
+\item Course
+\item Subject
+\end{itemize}
+
+\end{columns}
+
+\end{frame}
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\begin{frame}{Analytics and Tracking}
+
+\begin{itemize}
+\item Track number of downloads
+\item Identify trending materials
+\item Show most downloaded notes
+\item Track top contributors
+\end{itemize}
+
+\begin{exampleblock}{Insight}
+Helps users find the most useful and popular study materials.
+\end{exampleblock}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Admin Features}
+
+\begin{itemize}
+\item Remove inappropriate materials
+\item Manage users
+\item Delete spam uploads
+\item Monitor system activity
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Technology Stack}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+
+\textbf{Frontend}
+\begin{itemize}
+\item React.js
+\item HTML5
+\item CSS3
+\item JavaScript
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\textbf{Backend}
+\begin{itemize}
+\item Node.js
+\item Express.js
+\item MongoDB
+\end{itemize}
+
+\end{columns}
+
+\vspace{0.4cm}
+
+\begin{block}{Authentication}
+\begin{itemize}
+\item JWT (JSON Web Tokens)
+\item OAuth 2.0 for social login
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+
+%------------------------------------------------
+
+\begin{frame}{Future Improvements}
+
+\begin{itemize}
+\item AI based PDF summarization
+\item Recommendation system
+\item Leaderboard for top contributors
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\centering
+\Huge Thank You
+\end{frame}
+
+\end{document}
